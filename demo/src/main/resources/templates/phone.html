@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<title>show phone</title>
+</head>
+<body>
+<h2>Spring boot Phone</h2>
+<p>${phones.name}</p>
+<ul th:each="phone: ${phones}">
+<li>
+<span th:text="${phone.name}">手机名字</span>
+<span th:text="${phone.color}">手机颜色</span>
+<span th:text="${phone.storeName}">店铺</span>
+</li>
+</ul>
+</body>
+</html>
