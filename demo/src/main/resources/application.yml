@@ -11,7 +11,19 @@ spring:
     check-template-location: true
     suffix: .html
     encoding: UTF-8
+  redis:
+    host: 127.0.0.1
+    port: 6379
+    timeout: 5000
+    database: 0
+    jedis:
+      pool:
+        max-idle: 8
+        min-idle: 0
+        max-wait: -1
+        max-active: 8
 mybatis:
   type-aliases-package: com.example.demo.pojo
   mapper-locations: classpath:mapper/*.xml
   config-location: classpath:mybatis-config.xml
+  
